@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= question.description %>
+    </h1>
+    <ul>
+        <li> Question: <%= question.description %>
+        </li>
+        <li> Details: <%= question.alternatives %>
+        </li>
+        <li> Image:
+            <img src="<%= question.image %>" class="card-img-top" alt="...">
+        </li>
+    </ul>
+
+    <a href="/create-question">Cerate Question</a>
+
+    <button class="btn btn-primary"><a href="/questions/<%= question._id %>/edit">Update Question</a></button>
+    <form action="/question/<%=question._id%>?_method=Delete" method='POST'>
+        <button>Delete </button>
+    </form>
+</body>
+
+</html>

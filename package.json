@@ -1,0 +1,33 @@
+{
+  "name": "multp_choice",
+  "version": "1.0.0",
+  "description": "multiple_choice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "author": "Mohammed Mohiudin",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohiuddin2/multiple_choice.git"
+  },
+  "keywords": [
+    "multiple",
+    "choice"
+  ],
+  "bugs": {
+    "url": "https://github.com/Mohiuddin2/multiple_choice/issues"
+  },
+  "homepage": "https://github.com/Mohiuddin2/multiple_choice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.4"
+  }
+}
