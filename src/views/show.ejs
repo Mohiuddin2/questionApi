@@ -18,13 +18,11 @@
 
         <% for(let choice of choices) {%>
             <div>
-                <% for(let q_heading of q_headings ) {%>
                     <ol>
                         <b>
-                            <%=q_heading.q_heading %>
+                            <%=choice.question.q_heading %>
                         </b>
                     </ol>
-                    <% } %>
             </div>
             <ul>
                 <div>
