@@ -3,13 +3,14 @@ const Schema = mongoose.Schema;
 
 // Creating Schema..
 const QuestionSchema = new Schema({
-
-  description: String,
-  alternatives: String,
-  image: String,
-  name: String,
- 
+  q_heading: {
+    type: String,
+    required: [true, "Question Must HaveQuestion "],
+  },
+  choice: [{ type: Schema.Types.ObjectId, ref: "Choice" }],
 });
+
 // We've give the model the name Question.
-module.exports = mongoose.model("Question", QuestionSchema);
-// We made the necessary model and schema,
+const Question = mongoose.model("Question", QuestionSchema);
+module.exports = Question;
+

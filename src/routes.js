@@ -20,25 +20,26 @@ router.get("/create-question", (req, res) => {
   res.render("create_new.ejs");
 });
 
-// app .post to Create the new Question--- I failed in this route to save more than 2 data
-// router.post("/questions", async (req, res) => {
-//   const newQuestion = new Question(req.body);
-//   await newQuestion.save();
-//   console.log(newQuestion);
-//   res.redirect(`/questions/${newQuestion._id}`);
-// });
+
+// Creating Choice route
+router.get("/", (req, res) => {
+  res.render("./question/q_head");
+});
+
 router.post("/questions", async (req, res) => {
   try {
     const { description } = req.body;
-    const { alternatives } = req.body;
-    const { image } = req.body;
-    const { name } = req.body;
+    const { choice } = req.body;
+    //    const { alternatives } = req.body;
+    // const { image } = req.body;
+    // const { name } = req.body;
 
     const question = await Question.create({
       description,
-      alternatives,
-      image,
-      name,
+      choice,
+      // alternatives,
+      // image,
+      // name,
     });
     res.redirect(`/questions/${question._id}`);
     console.log(question);
@@ -47,12 +48,48 @@ router.post("/questions", async (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get Route for Updating
 router.get("/questions/:id/edit", async (req, res) => {
   const { id } = req.params;
   const question = await Question.findById(id);
   res.render("edit", { question });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // update one quiz question
 router.put("/question/:id", async (req, res) => {

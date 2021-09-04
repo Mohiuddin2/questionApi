@@ -11,16 +11,16 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mohiuddin2/multiple_choice.git"
+    "url": "git+https://github.com/Mohiuddin2/questionApi.git"
   },
   "keywords": [
     "multiple",
     "choice"
   ],
   "bugs": {
-    "url": "https://github.com/Mohiuddin2/multiple_choice/issues"
+    "url": "https://github.com/Mohiuddin2/questionApi/issues"
   },
-  "homepage": "https://github.com/Mohiuddin2/multiple_choice#readme",
+  "homepage": "https://github.com/Mohiuddin2/questionApi#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
