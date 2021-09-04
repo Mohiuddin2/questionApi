@@ -37,12 +37,21 @@ router.get("/savedq", async (req, res) => {
 
 router.post("/questions", async (req, res) => {
   try {
-    const { choice1, choice2, choice3, choice4 } = req.body;
+    //taking data from request's body
+    const { choice1, choice2, choice3, choice4, q_heading } = req.body;
+
+    // setting up filling the question and choice schema
     const choice = await Choice.create({ choice1, choice2, choice3, choice4 });
-    const { q_heading } = req.body;
     const question = await Question.create({ q_heading });
+
+    //setting the references 
+    choice.question = question  
+    question.choice = choice 
+     
+    //saving to database 
     await question.save();
     await choice.save();
+
     // res.redirect(`/questions/${question._id}`);
     console.log(question, choice);
     res.json(question);
