@@ -16,91 +16,45 @@
             background-color: olive;
         }
     </style>
+
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h3>Create a Question</h3>
 
-
-
-    <!-- <h1 class="text-center">Create Question</h1>
-        <div class="col-6 offset-3">
-            <form action="/questions" method="POST">
-                <h3>1. What is your name?</h3>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id="">
-                    <label class="form-check-label" for="description">
-                        <input type="text" class="form-control" name="description" id="description">
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id="">
-                    <label class="form-check-label" for="alternatives">
-                        <input type="text" class="form-control" name="alternatives" id="alternatives">
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id="">
-                    <label class="form-check-label" for="image">
-                        <input type="text" class="form-control" name="image" id="image">
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="" id="">
-                    <label class="form-check-label" for="name">
-                        <input type="text" class="form-control" name="name" id="image">
-                    </label>
-                </div>
-                <div class="mb-3"><button class="btn btn-success">Save Question</button></div>
-            </form>
+                <form class="form" action="/questions" method="POST" id="">
+                    <input type="radio" name="q_heading" id="r1" class="">
+                    <textarea class="rounded mb-1" for="r1" placeholder="Question" name="q_heading" id="" cols="40"
+                        rows="1" required></textarea>
+                    <!-- <div class="mb-3"><button class="btn btn-success">Save Question</button></div> -->
+                    <textarea class="rounded mb-1" placeholder="Choice 1" name="choice1" id="choice1" cols="40"
+                        rows="1"></textarea>
+                    <textarea class="rounded mb-1" placeholder="Choice 2" name="choice2" id="choice2" cols="40"
+                        rows="1"></textarea>
+                    <textarea class="rounded mb-1" placeholder="Choice 3" name="choice3" id="choice3" cols="40"
+                        rows="1"></textarea>
+                    <textarea class="rounded mb-1" placeholder="Choice 4" name="choice4" id="choice4" cols="40"
+                        rows="1"></textarea>
+                    <div class="mb-3"><button class="btn btn-success">Save Question</button>
+                </form>
+            </div>
         </div>
-    </div> -->
-    <div class="row">
-        <h1 class="text-center">Create Question</h1>
-        <div class="col-6 offset-3">
-            <form action="/questions" method="POST">
-                <fieldset id="group1" class="col-6 offset-3">
-                    <div>
-                        <input class="form-check-input" type="radio" value="value1" name="group1"><textarea
-                            class="rounded" name="description" id="description" cols="40" rows="1"></textarea>
-                    </div>
-                    <!-- const QuestionSchema = new Schema({
-                    q_heading: {
-                        type: String,
-                        required: [true, "Question Must HaveQuestion "],
-                    },
-                    choice: [{ type: Schema.Types.ObjectId, ref: "Choice" }],
-                    });
-                    -->
-                    <div>
-                        <div name="choice">
-                            <input class="form-check-input" type="radio" value="value1" name="group1"><textarea
-                                class="rounded" name="alternatives" id="" cols="40" rows="1"></textarea>
-                        </div>
-                        <div>
-                            <input class="form-check-input" type="radio" value="value1" name="group1"><textarea
-                                class="rounded" name="image" id="" cols="40" rows="1"></textarea>
-                        </div>
-                        <div>
-                            <input class="form-check-input" type="radio" value="value1" name="group1"><textarea
-                                class="rounded" name="name1" id="" cols="40" rows="1"></textarea>
-                        </div>
-                    </div>
+    </div>
 
 
-                    <div class="mb-3"><button class="btn btn-success">Save Question</button></div>
-                    <% console.log("saving") %>
-                </fieldset>
-            </form>
-        </div>
-        <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-            crossorigin="anonymous"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     -->

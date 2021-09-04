@@ -11,25 +11,42 @@
 </head>
 
 <body>
-    <h1>
-        <%= question.description %>
+    <h1 class="center">
+        The Questions
     </h1>
     <ul>
-        <li> Question: <%= question.description %>
-        </li>
-        <li> Details: <%= question.alternatives %>
-        </li>
-        <li> Image:
-            <img src="<%= question.image %>" class="card-img-top" alt="...">
-        </li>
-    </ul>
 
-    <a href="/create-question">Cerate Question</a>
+        <% for(let choice of choices) {%>
+            <div>
+                <% for(let q_heading of q_headings ) {%>
+                    <ol>
+                        <b>
+                            <%=q_heading.q_heading %>
+                        </b>
+                    </ol>
+                    <% } %>
+            </div>
+            <ul>
+                <div>
+                    <%=choice.choice1 %>
+                </div>
+                <div>
+                    <%=choice.choice2 %>
+                </div>
+                <div>
+                    <%=choice.choice3 %>
+                </div>
+                <div>
+                    <%=choice.choice4 %>
+                </div>
+            </ul>
+            <% } %>
 
-    <button class="btn btn-primary"><a href="/questions/<%= question._id %>/edit">Update Question</a></button>
-    <form action="/question/<%=question._id%>?_method=Delete" method='POST'>
-        <button>Delete </button>
-    </form>
+
+
+                <a href="/">Cerate Question</a>
+
+
 </body>
 
 </html>

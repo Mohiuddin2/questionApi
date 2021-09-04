@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const choicetype = { type: String, required: trure };
+const choicetype = { type: String, required: true };
 
 const choiceSchema = new Schema({
   choice1: choicetype,
@@ -14,3 +14,6 @@ const choiceSchema = new Schema({
 // We've give the model the name Choice.
 const Choice = mongoose.model("Choice", choiceSchema);
 module.exports = Choice;
+
+
+
